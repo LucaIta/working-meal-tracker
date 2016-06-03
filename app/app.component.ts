@@ -8,6 +8,7 @@ import { MealsDisplayComponent } from './meals.display.component';
   template: `
    <div class="container">
      <h1>Meal Tracker</h1>
+     <hr>
      <meals-display></meals-display>
    </div>
   `
