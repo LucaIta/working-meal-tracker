@@ -4,10 +4,9 @@ import { Meal } from './meal.model';
 
 @Component({
   selector: 'meals-display',
-  inputs: ["meals"],
   directives: [newMealComponent],
   template: `
-  <h4 *ngFor="#currentMeal of meals">
+  <h4 *ngFor="#currentMeal of mealList">
   <h3>{{currentMeal.name}}</h3>
   <h5>{{currentMeal.details}}</h5>
   <h5>{{currentMeal.calories}}</h5>
