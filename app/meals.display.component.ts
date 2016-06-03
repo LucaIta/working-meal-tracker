@@ -2,10 +2,11 @@ import { Component } from 'angular2/core';
 import { newMealComponent } from './new.meal.component';
 import { Meal } from './meal.model';
 import { CaloriesPipe } from './calories.pipe';
+import { EditMealDetails } from './edit.meal.details.component';
 
 @Component({
   selector: 'meals-display',
-  directives: [newMealComponent],
+  directives: [newMealComponent,EditMealDetails],
   pipes: [CaloriesPipe],
   template: `
 
@@ -16,28 +17,28 @@ import { CaloriesPipe } from './calories.pipe';
   </select>
 
   <h4 *ngFor="#currentMeal of mealList | calories:caloriesSelector">
-  <h3 (click)="mealClicked(currentMeal.name)">{{currentMeal.name}}</h3>
-  <h5>{{currentMeal.details}}</h5>
-  <h5>{{currentMeal.calories}}</h5>
+    <h3 (click)="mealClicked(currentMeal)">{{currentMeal.name}}</h3>
+    <h5>{{currentMeal.details}}</h5>
+    <h5>{{currentMeal.calories}}</h5>
   </h4>
+  <edit-meal-details *ngIf="selectedMeal" [meal]="selectedMeal"></edit-meal-details>
   <new-meal (onSubmitNewMeal)="createNewMeal($event)"></new-meal>
+
   `
 })
 
 export class MealsDisplayComponent {
   public mealList : Meal[] = [];
+  public selectedMeal : Meal;
   public caloriesSelector : string;
   createNewMeal(mealInfoArray : string[]){
-    console.log(mealInfoArray);
-
     this.mealList.push(new Meal(mealInfoArray[0],mealInfoArray[1],parseInt(mealInfoArray[2]),this.mealList.length));
-    console.log(this.mealList);
   }
-  mealClicked(name){
-    console.log(name);
+  mealClicked(Meal){
+    this.selectedMeal = Meal;
+    console.log(this.selectedMeal);
   }
   onChange(filterOption){
     this.caloriesSelector = filterOption;
-    console.log(this.caloriesSelector);
   }
 }
