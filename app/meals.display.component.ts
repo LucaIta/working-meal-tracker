@@ -1,12 +1,14 @@
 import { Component } from 'angular2/core';
 import { newMealComponent } from './new.meal.component';
 import { Meal } from './meal.model';
+import { CaloriesPipe } from './calories.pipe';
 
 @Component({
   selector: 'meals-display',
   directives: [newMealComponent],
+  pipes: [CaloriesPipe],
   template: `
-  <h4 *ngFor="#currentMeal of mealList">
+  <h4 *ngFor="#currentMeal of mealList | calories:600">
   <h3>{{currentMeal.name}}</h3>
   <h5>{{currentMeal.details}}</h5>
   <h5>{{currentMeal.calories}}</h5>
