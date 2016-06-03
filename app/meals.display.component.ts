@@ -16,7 +16,7 @@ import { CaloriesPipe } from './calories.pipe';
   </select>
 
   <h4 *ngFor="#currentMeal of mealList | calories:caloriesSelector">
-  <h3>{{currentMeal.name}}</h3>
+  <h3 (click)="mealClicked(currentMeal.name)">{{currentMeal.name}}</h3>
   <h5>{{currentMeal.details}}</h5>
   <h5>{{currentMeal.calories}}</h5>
   </h4>
@@ -31,6 +31,9 @@ export class MealsDisplayComponent {
     console.log(mealInfoArray);
     this.mealList.push(new Meal(mealInfoArray[0],mealInfoArray[1],parseInt(mealInfoArray[2])));
     console.log(this.mealList);
+  }
+  mealClicked(name){
+    console.log(name);
   }
   onChange(filterOption){
     this.caloriesSelector = filterOption;
