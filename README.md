@@ -1,21 +1,28 @@
 Meal Tracker Angular Solo Project for Epicodus 6.2.2016
 
-By Luca Quatela
+#### _Java Solo Project for Epicodus 5.7.2016_
 
-Description
+# _Hair Salon_
 
-It allows the user to insert their meals with a name, details and calories. The user can then edit the meals information and filter the meals by calories amount.
+#### By _**Luca Quatela**_
 
-Setup/Installation Requirements
+## Description
 
-clone the following directory: https://github.com/LucaIta/GitUserDisplayer/blob/master/README.md
-Run the following commands:
+_It allows the user to insert their meals with a name, details and calories. The user can then edit the meals information and filter the meals by calories amount._
+
+## Known Bugs
+* _no known bugs
+
+## Setup/Installation Requirements
+
+* _clone the following directory: https://github.com/LucaIta/GitUserDisplayer/blob/master/README.md
+* _Run the following commands:
 - npm install
 - bower install
 - gulp build
 - gulp serve
 
-Support and contact details
+## Support and contact details
 
 Contact Luca in case of you have trouble with the page
 
@@ -28,3 +35,16 @@ License
 This software is licensed under the MIT license
 
 Copyright (c) 2016 Luca Quatela
+
+
+
+
+
+
+
+
+
+
+
+
+
