@@ -1,6 +1,7 @@
 .meal {
   border: 1px solid #E1E1E1; /* color of the border */
   padding-left: 15px; /* space between the text in the element and the border around it */
+  padding-bottom: 10px;
   background-color : #fafafa;
   margin-top: 20px;
 }
