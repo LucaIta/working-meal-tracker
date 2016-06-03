@@ -1,6 +1,7 @@
 import { Component } from 'angular2/core';
 import { MealsDisplayComponent } from './meals.display.component';
-import { Meal } from './meal.model.ts';
+import { Meal } from './meal.model'; // can I remove this?
+
 
 
 @Component({
@@ -9,7 +10,7 @@ import { Meal } from './meal.model.ts';
   template: `
    <div class="container">
      <h1>Meal Tracker</h1>
-     <meals-display [meals]="mealsList"></<meals-display>>
+     <meals-display [meals]="mealsList"></meals-display>
    </div>
   `
 })
