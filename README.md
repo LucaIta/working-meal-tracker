@@ -22,23 +22,15 @@ _It allows the user to insert their meals with a name, details and calories. The
 
 Contact Luca in case of you have trouble with the page
 
-Technologies Used
+## Technologies Used
 
 JS, node.js, Typesctipt, Angular, Bower, Gulp
 
-License
+### License
 
 This software is licensed under the MIT license
 
 Copyright (c) 2016 Luca Quatela
-
-
-
-
-
-
-
-
 
 
 
