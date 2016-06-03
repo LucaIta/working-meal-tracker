@@ -1,7 +1,8 @@
 import { Component } from 'angular2/core';
 import { newMealComponent } from './new.meal.component';
+import { Meal } from './meal.model';
 
-@Component({ //component decorator defining selector and template
+@Component({
   selector: 'meals-display',
   inputs: ["meals"],
   directives: [newMealComponent],
@@ -16,9 +17,10 @@ import { newMealComponent } from './new.meal.component';
 })
 
 export class MealsDisplayComponent {
-  createNewMeal(description : string){
-    console.log(description);
-  // createNewMeal(description : string, details : string, calories : number){
-  //   console.log(description,details,calories);
+  public mealList : Meal[] = [];
+  createNewMeal(mealInfoArray : string[]){
+    console.log(mealInfoArray);
+    this.mealList.push(new Meal(mealInfoArray[0],mealInfoArray[1],parseInt(mealInfoArray[2])));
+    console.log(this.mealList);
   }
 }

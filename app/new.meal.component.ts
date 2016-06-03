@@ -1,5 +1,4 @@
 import { Component, EventEmitter } from 'angular2/core';
-import { Meal } from './meal.model';
 
 @Component({
   selector: 'new-meal',
@@ -16,16 +15,16 @@ import { Meal } from './meal.model';
 })
 
 export class newMealComponent {
-  public onSubmitNewMeal : EventEmitter<String>;
-  // public onSubmitNewMeal : EventEmitter<string,string,number>;
+  public mealInfoArray : string[];
+  public onSubmitNewMeal : EventEmitter<string[]>;
   constructor(){
     this.onSubmitNewMeal = new EventEmitter();
   }
 
   addMeal(description : HTMLInputElement, details : HTMLInputElement, calories : HTMLInputElement){
     console.log(description.value, details.value, calories.value);
-    this.onSubmitNewMeal.emit(description.value);
-    // this.onSubmitNewMeal.emit(description.value, details.value, calories.value);
+    this.mealInfoArray = [description.value, details.value, calories.value];
+    this.onSubmitNewMeal.emit(this.mealInfoArray);
     description.value = "";
     details.value = "";
     calories.value = "";
