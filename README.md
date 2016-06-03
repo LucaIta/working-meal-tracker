@@ -1,8 +1,4 @@
-Meal Tracker Angular Solo Project for Epicodus 6.2.2016
-
-#### _Java Solo Project for Epicodus 5.7.2016_
-
-# _Hair Salon_
+#### _Meal Tracker Angular Solo Project for Epicodus 6.2.2016_
 
 #### By _**Luca Quatela**_
 
