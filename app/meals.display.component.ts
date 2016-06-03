@@ -30,7 +30,7 @@ import { EditMealDetails } from './edit.meal.details.component';
 })
 
 export class MealsDisplayComponent {
-  public mealList : Meal[] = [new Meal("Lunch","I had Lunch",9,0)]; // need to remove this meal
+  public mealList : Meal[] = [];
   public selectedMeal : Meal;
   public caloriesSelector : string;
   createNewMeal(mealInfoArray : string[]){
