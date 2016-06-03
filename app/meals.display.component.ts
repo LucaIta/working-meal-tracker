@@ -8,7 +8,14 @@ import { CaloriesPipe } from './calories.pipe';
   directives: [newMealComponent],
   pipes: [CaloriesPipe],
   template: `
-  <h4 *ngFor="#currentMeal of mealList | calories:600">
+
+  <select (change)="onChange($event.target.value)">
+    <option value="all">Show all meals</option>
+    <option value="unhealty">Show only unhealty foods</option>
+    <option value="healthy">Show only healthy foods</option>
+  </select>
+
+  <h4 *ngFor="#currentMeal of mealList | calories:caloriesSelector">
   <h3>{{currentMeal.name}}</h3>
   <h5>{{currentMeal.details}}</h5>
   <h5>{{currentMeal.calories}}</h5>
@@ -19,9 +26,14 @@ import { CaloriesPipe } from './calories.pipe';
 
 export class MealsDisplayComponent {
   public mealList : Meal[] = [];
+  public caloriesSelector : string;
   createNewMeal(mealInfoArray : string[]){
     console.log(mealInfoArray);
     this.mealList.push(new Meal(mealInfoArray[0],mealInfoArray[1],parseInt(mealInfoArray[2])));
     console.log(this.mealList);
+  }
+  onChange(filterOption){
+    this.caloriesSelector = filterOption;
+    console.log(this.caloriesSelector);
   }
 }
