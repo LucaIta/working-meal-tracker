@@ -29,7 +29,8 @@ export class MealsDisplayComponent {
   public caloriesSelector : string;
   createNewMeal(mealInfoArray : string[]){
     console.log(mealInfoArray);
-    this.mealList.push(new Meal(mealInfoArray[0],mealInfoArray[1],parseInt(mealInfoArray[2])));
+
+    this.mealList.push(new Meal(mealInfoArray[0],mealInfoArray[1],parseInt(mealInfoArray[2]),this.mealList.length));
     console.log(this.mealList);
   }
   mealClicked(name){
