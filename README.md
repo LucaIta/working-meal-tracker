@@ -8,7 +8,7 @@ It allows the user to insert their meals with a name, details and calories. The 
 
 Setup/Installation Requirements
 
-_clone the following directory: https://github.com/LucaIta/GitUserDisplayer/blob/master/README.md
+clone the following directory: https://github.com/LucaIta/GitUserDisplayer/blob/master/README.md
 Run the following commands:
 - npm install
 - bower install
